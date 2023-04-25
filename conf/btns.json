@@ -1,0 +1,95 @@
+{
+  "single": [
+    {
+      "groupName": "工程",
+      "commands": [
+        {
+          "label": "一键克隆",
+          "engine": "C:\\opt\\git\\bin\\bash.exe",
+          "command": "/c/opt/ScriptManager/script/clone/clone-all.sh /c/opt/ScriptManager/script/clone/repos.csv",
+          "help": "一键克隆所有工程"
+        }
+      ]
+    },
+    {
+      "groupName": "启动器",
+      "commands": [
+        {
+          "label": "Nacos",
+          "engine": "C:\\opt\\git\\bin\\bash.exe",
+          "command": "/c/opt/nacos/bin/restart.sh",
+          "pwd": "C:\\opt\\nacos\\bin",
+          "help": "启动Nacos",
+          "cmdType": "launcher"
+        },
+        {
+          "label": "Jmeter",
+          "command": "C:\\opt\\apache-jmeter-5.5\\bin\\jmeterw.cmd",
+          "pwd": "C:\\opt\\apache-jmeter-5.5\\bin",
+          "help": "启动Nacos",
+          "cmdType": "launcher"
+        }
+      ]
+    }
+  ],
+  "batch": [
+    {
+      "groupName": "mvn",
+      "commands": [
+        {
+          "label": "构建",
+          "command": "mvn -Dmaven.test.skip=true -DskipTests -T 1C -DsendCredentialsOverHttp clean package",
+          "help": "跳过测试构建"
+        },
+        {
+          "label": "构建client",
+          "engine": "C:\\opt\\git\\bin\\bash.exe",
+          "command": "/c/opt/ScriptManager/script/build-client.sh",
+          "help": "仅构建client"
+        },
+        {
+          "label": "依赖分析",
+          "command": "mvn dependency:tree",
+          "help": "依赖分析"
+        }
+      ]
+    },
+    {
+      "groupName": "Git",
+      "commands": [
+        {
+          "label": "更新",
+          "command": "git pull",
+          "help": "更新"
+        },
+        {
+          "label": "状态",
+          "command": "git status --short",
+          "help": "状态"
+        },
+        {
+          "label": "回滚",
+          "command": "git reset --hard HEAD~1",
+          "help": "回滚"
+        }
+      ]
+    },
+    {
+      "groupName": "Kafka",
+      "commands": [
+        {
+          "label": "启用",
+          "engine": "C:\\opt\\git\\bin\\bash.exe",
+          "command": "/c/opt/ScriptManager/script/kafka-enable.sh",
+          "help": "启用@KafkaListener"
+        },
+        {
+          "label": "禁用",
+          "engine": "C:\\opt\\git\\bin\\bash.exe",
+          "command": "/c/opt/ScriptManager/script/kafka-disable.sh",
+          "help": "禁用@KafkaListener"
+        }
+      ]
+    }
+  ]
+}

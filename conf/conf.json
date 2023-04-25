@@ -1,0 +1,10 @@
+{
+  "Workspace": "C:\\",
+  "ExcludeDir": ".git",
+  "LogFilePath": "C:\\tmp\\skyine.log",
+  "ThreadCount": 6,
+  "SingleCommand": "echo aa;sleep 30;echo bb",
+  "SingleCommandEngine": "C:\\opt\\git\\bin\\bash.exe",
+  "BatchCommand": "git pull",
+  "BatchCommandEngine": ""
+}
